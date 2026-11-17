@@ -7,6 +7,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>IRON90 — 3-Month Transformation</title>
+  <link rel="manifest" href="manifest.json" />
+
   <style>
     :root {
       --bg: #0b1120;
@@ -658,5 +660,11 @@
 
   renderAll();
 </script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js');
+  }
+</script>
+
 </body>
 </html>
